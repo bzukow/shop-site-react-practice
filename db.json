@@ -1,0 +1,67 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 1",
+            "description":"A really nice product 1",
+            "price": 10.00
+        },
+        {
+            "id": "2",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 2",
+            "description":"A really nice product 2",
+            "price": 20.00
+        },
+        {
+            "id": "3",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 3",
+            "description":"A really nice product 3",
+            "price": 30.00
+        },
+        {
+            "id": "4",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 4",
+            "description":"A really nice product 4",
+            "price": 40.00
+        },
+        {
+            "id": "5",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 5",
+            "description":"A really nice product 5",
+            "price": 50.00
+        },
+        {
+            "id": "6",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 6",
+            "description":"A really nice product 6",
+            "price": 60.00
+        },
+        {
+            "id": "7",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 7",
+            "description":"A really nice product 7",
+            "price": 70.00
+        },
+        {
+            "id": "8",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 8",
+            "description":"A really nice product 8",
+            "price": 80.00
+        },
+        {
+            "id": "9",
+            "fotoSrc": "/images/placeholder-small.jpg",
+            "name": "Product 9",
+            "description":"A really nice product 9",
+            "price": 90.00
+        }
+    ]
+}
