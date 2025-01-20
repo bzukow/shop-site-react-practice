@@ -1,25 +1,33 @@
-import './App.css';
-import { useState,useEffect } from 'react';
-import MainSite from './MainSite.js';
+import "./App.css";
+import { useState, useEffect } from "react";
+import products from "./db.json";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import ProductDetails from "./pages/ProductDetails";
 
 function App() {
-  const [productsList, setProductsList] = useState(['']);
+  const [productsList, setProductsList] = useState([""]);
 
   useEffect(() => {
-          fetch("http://localhost:3001/products")
-              .then((response) => response.json())
-              .then((data) => {
-                  setProductsList(data);
-              })
-              .catch((err) => console.error("Something got wrong 😅", err));
-      }, []);
+    setProductsList(products);
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <MainSite productsList={productsList}/>
-      </header>
-    </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/product/123">Product 123</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home productsList={productsList}/>} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+      </Routes>
+      {/* <div className="App">
+        <header className="App-header">
+        
+        </header>
+      </div> */}
+    </BrowserRouter>
   );
 }
 
