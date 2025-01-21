@@ -1,0 +1,27 @@
+.product-details-page {
+    background-color: #6A8076;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+.site-image-container{
+    background-color: #546D5F;
+    text-align: left;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 220px;
+}
+.site-image-container img{
+    width: 100%;
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 5px 5px 0px 0px; 
+}
+.site-text-container{
+
+}

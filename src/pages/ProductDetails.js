@@ -4,7 +4,7 @@ function ProductDetails(product) {
   const { id } = useParams();
 
   return (
-    <div className={styles["product-site"]}>
+    <div className={styles["product-details-page"]}>
       <h1>Product Details</h1>
       <p>This is the page for product ID: {id}</p>
       <div className={styles["site-image-container"]}>
@@ -13,7 +13,6 @@ function ProductDetails(product) {
       <div className={styles["site-text-container"]}>
         <h3 className={styles["title"]}>{product.name}</h3>
         <p className={styles["price"]}>{product.price}€</p>
-        <button className={styles["button"]}>Show more</button>
         <button className={styles["button"]}>Add to cart</button>
       </div>
     </div>

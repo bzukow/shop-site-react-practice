@@ -22,3 +22,7 @@
       grid-template-columns: 1fr; 
     }
   }
+
+  .products-list a {
+    text-decoration: none;
+  }
