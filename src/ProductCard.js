@@ -1,19 +1,21 @@
 import styles from "./ProductCard.module.css"
 import { Link } from "react-router-dom";
 
-function ProductCard({product}) {
+function ProductCard({product, addToCart}) {
     return (
-      <Link to={`/product/${product.id}`}>
-        <div className={styles['product-card']}>
-          <div className={styles['card-image-container']}>
-              <img src={product.fotoSrc} alt={product.name} />
+        <Link to={`/product/${product.id}`}>
+          <div className={styles['product-card']}>
+            <div className={styles['card-image-container']}>
+                <img src={product.fotoSrc} alt={product.name} />
+            </div>
+            <div className={styles['card-text-container']}>
+                <h3 className={styles['title']}>{product.name}</h3>
+                <p className={styles["price"]}>{product.price}€</p>
+                <button className={styles["button"]} onClick={() => addToCart(product)}>Add to cart</button>
+            </div>
           </div>
-          <div className={styles['card-text-container']}>
-              <h3 className={styles['title']}>{product.name}</h3>
-  
-          </div>
-        </div>
-      </Link>
+        </Link>
+     
     );
   }
   
