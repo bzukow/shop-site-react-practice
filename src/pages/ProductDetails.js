@@ -5,7 +5,12 @@ function ProductDetails({productsList, addToCart}) {
   
   const product = productsList.find(product => product.id === id);
   if (!product) {
-    return <p>Product not found. 😢</p>; // Jeśli brak produktu
+    return (
+    <div className={styles["product-details-page"]}>
+      <p>Product not found. 😢</p>;
+      <button className={styles["button"]} onClick={() => addToCart(product)}>Back to the list</button>
+    </div>
+   );
   }
   return (
     <div className={styles["product-details-page"]}>
