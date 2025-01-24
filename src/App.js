@@ -12,6 +12,10 @@ function App() {
   useEffect(() => {
     setTimeout(() => {  
       setProductsList(products);
+      const savedCart = JSON.parse(localStorage.getItem("cart"));
+      if (savedCart) {
+        setCart(savedCart);
+      }
       setLoading(false);  
     }, 1000);  
   }, []);
@@ -19,18 +23,28 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => {
+      const updatedCart = [...prevCart, product];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      return updatedCart;
+    });
   };
 
   const removeFromCart = (productId) => {
-    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+    setCart((prevCart) => {
+      const updatedCart = prevCart.filter((item) => item.id !== productId);
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+      return updatedCart;
+    });
   };
   return (
     
     <BrowserRouter>
+    {!loading && (
     <header>
-        <Link to="/cart">Cart ({cart.length})</Link>
-      </header>
+      <Link to="/cart">Cart ({cart.length})</Link>
+    </header>
+  )}
       <Routes>
         <Route
           path="/"
