@@ -5,7 +5,7 @@ function Cart({ cart, removeFromCart }) {
     <div className={styles["cart-page"]}>
       <h1>Your Cart</h1>
       {cart.length === 0 ? (
-        <p>Your cart is empty 😔</p>
+        <p>Your 🛒 is empty 😔</p>
       ) : (
         <ul>
           {cart.map((item, index) => (

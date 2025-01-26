@@ -1,10 +1,10 @@
-
 import { useState, useEffect } from "react";
 import products from "./db.json";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 import Cart from "./pages/Cart";
+import styles from "./App.module.css"
 function App() {
   const [productsList, setProductsList] = useState([]);
   const [loading, setLoading] = useState(true);  
@@ -38,26 +38,22 @@ function App() {
     });
   };
   return (
+    <div className={styles['App-container']}>
+      <BrowserRouter>
+        {!loading && (
+          <header className={styles['App-header-cart']}>
+            <Link to="/cart">🛒✨ ({cart.length})</Link>
+          </header>
+        )}
+        <Routes>
+          <Route path="/" element={loading ? <div className={styles['App-container-loading']}><h2>Loading...</h2></div> : <Home productsList={productsList} addToCart={addToCart} />}/>
+          <Route path="/product/:id" element={loading ? <div className={styles['App-container-loading']}><h2>Loading...</h2></div> : <ProductDetails productsList={productsList} addToCart={addToCart} />}/>
+          <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
+        </Routes>
+        
+      </BrowserRouter>
+  </div>
     
-    <BrowserRouter>
-    {!loading && (
-    <header>
-      <Link to="/cart">Cart ({cart.length})</Link>
-    </header>
-  )}
-      <Routes>
-        <Route
-          path="/"
-          element={loading ? <h2>Loading...</h2> : <Home productsList={productsList} addToCart={addToCart} />}
-        />
-        <Route
-          path="/product/:id"
-          element={loading ? <h2>Loading...</h2> : <ProductDetails productsList={productsList} addToCart={addToCart} />}
-        />
-        <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} />} />
-      </Routes>
-      
-    </BrowserRouter>
     
   );
 }

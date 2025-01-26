@@ -22,9 +22,15 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;
+    color: #c9dcc1;
+
   }
-  
+  .App-header h1{
+    margin-bottom: 0px;
+  }
+  .App-header p{
+    margin-bottom: 40px;
+  }
   .App-link {
     color: #61dafb;
   }

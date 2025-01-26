@@ -1,4 +1,5 @@
 .product-card{
+    font-family: "Emilys Candy", serif;
     background-color: #546D5F;
     text-align: left;
     border-radius: 5px;
@@ -18,11 +19,12 @@
 }
 .card-text-container{
     padding:20px;
+    place-items: center;
 }
 .product-card .title{
     
     /* color: #723D46; */
-    color: #e8d0a7;
+    color: #c9dcc1;
     margin:unset;
     font-size: 20px;
 }
@@ -34,6 +36,39 @@
     font-weight: bold;
     color: #e8d0a7;
 }
-.product-card .button{
-    color: #B2A093;
-}
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+.product-card .button {
+    font-family: "Emilys Candy", serif;
+    font-weight: 600;
+    font-style: normal;
+  background: linear-gradient(135deg, #e8d0a7, #88B7A7); /* Pastelowe zielenie */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 15px rgba(100, 180, 120, 0.3); /* Miękki zielony cień */
+  transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .product-card .button:hover {
+    transform: scale(1.05); /* Powiększa */
+  box-shadow: 0 12px 20px rgba(100, 180, 120, 0.4); /* Mocniejszy cień */
+  }
+  
+  .product-card .button:active {
+    transform: scale(0.95); /* Zmniejsza */
+  box-shadow: 0 4px 8px rgba(100, 180, 120, 0.2); /* Słabszy cień */
+  }
+  .product-card .button--secondary {
+    background: linear-gradient(135deg, #e8d0a7, #6A8076); /* Ciut ciemniejsze */
+    box-shadow: 0 8px 15px rgba(105, 160, 120, 0.3);
+  }
+  
+  .product-card .button--small {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
