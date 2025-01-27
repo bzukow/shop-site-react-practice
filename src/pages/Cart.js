@@ -11,10 +11,12 @@ function Cart({ cart, removeFromCart }) {
           {cart.map((item, index) => (
             <li key={index} className={styles["cart-item"]}>
               <img src={item.fotoSrc} alt={item.name} />
-              <div>
+              <div className={styles["cart-item-text"]} >
                 <h3>{item.name}</h3>
                 <p>{item.price}€</p>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
+              </div>
+              <div>
+                <button onClick={() => removeFromCart(item.id)}>x</button>
               </div>
             </li>
           ))}

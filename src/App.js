@@ -31,10 +31,21 @@ function App() {
   };
 
   const removeFromCart = (productId) => {
+    // setCart((prevCart) => {
+    //   const updatedCart = prevCart.filter((item) => item.id !== productId);
+    //   localStorage.setItem("cart", JSON.stringify(updatedCart));
+    //   return updatedCart;
+    // });
     setCart((prevCart) => {
-      const updatedCart = prevCart.filter((item) => item.id !== productId);
-      localStorage.setItem("cart", JSON.stringify(updatedCart));
-      return updatedCart;
+      const index = prevCart.findIndex((item) => item.id === productId);
+  
+      if (index !== -1) {
+        const updatedCart = [...prevCart];
+        updatedCart.splice(index, 1); 
+        localStorage.setItem("cart", JSON.stringify(updatedCart)); 
+        return updatedCart;
+      }
+      return prevCart; 
     });
   };
   return (
