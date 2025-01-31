@@ -50,7 +50,7 @@ function App() {
   };
   return (
     <div className={styles['App-container']}>
-      <BrowserRouter>
+      <BrowserRouter basename="/shop-site-react-practice">
         {!loading && (
           <header className={styles['App-header-cart']}>
             <Link to="/cart">🛒✨ ({cart.length})</Link>
