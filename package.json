@@ -2,7 +2,7 @@
   "name": "shop-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bzukow.github.io/shop-site-practice-react",
+  "homepage": "https://bzukow.github.io/shop-site-react-practice",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
