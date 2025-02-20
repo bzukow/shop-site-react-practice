@@ -37,14 +37,31 @@
     transform: rotate(360deg);
   }
 } */
-
-.App-header-cart{
+ .App-header-style{
   background-color: #6A8076;
-  color: white;
+  color: #c9dcc1 !important;
   align-items: end;
   display: flex;
-  flex-flow: row-reverse;
+  flex-flow: row;
   padding: 5px 20px;
+  font-size: 1.25rem;
+  justify-content: space-between;
+ }
+ .App-header-style-homepage{
+  background-color: #6A8076;
+  color: #c9dcc1 !important;
+  align-items: end;
+  display: flex;
+  flex-flow: row;
+  padding: 5px 20px;
+  font-size: 1.25rem;
+  justify-content: end;
+ }
+.App-header-back-button{
+  cursor: pointer;
+}
+.App-header-cart{
+
 }
 .App-container{
   background-color: #6A8076;
