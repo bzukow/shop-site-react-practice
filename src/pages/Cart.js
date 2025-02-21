@@ -15,7 +15,7 @@ function Cart({ cart, removeFromCart }) {
                 <h3>{item.name}</h3>
                 <p>{item.price}€</p>
               </div>
-              <div>
+              <div className={styles["cart-item-closebutton"]}>
                 <button onClick={() => removeFromCart(item.id)}>x</button>
               </div>
             </li>

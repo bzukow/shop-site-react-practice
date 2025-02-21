@@ -39,3 +39,6 @@
   .cart-item-text p{
     margin:5px 0px;
   }
+  .cart-item-closebutton{
+    margin-left: auto;
+  }
