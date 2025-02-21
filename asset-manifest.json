@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/shop-site-react-practice/static/css/main.288e6df3.css",
-    "main.js": "/shop-site-react-practice/static/js/main.9533917a.js",
+    "main.css": "/shop-site-react-practice/static/css/main.39f6b5a3.css",
+    "main.js": "/shop-site-react-practice/static/js/main.b355fc33.js",
     "static/js/488.dbb1bf71.chunk.js": "/shop-site-react-practice/static/js/488.dbb1bf71.chunk.js",
     "index.html": "/shop-site-react-practice/index.html",
-    "main.288e6df3.css.map": "/shop-site-react-practice/static/css/main.288e6df3.css.map",
-    "main.9533917a.js.map": "/shop-site-react-practice/static/js/main.9533917a.js.map",
+    "main.39f6b5a3.css.map": "/shop-site-react-practice/static/css/main.39f6b5a3.css.map",
+    "main.b355fc33.js.map": "/shop-site-react-practice/static/js/main.b355fc33.js.map",
     "488.dbb1bf71.chunk.js.map": "/shop-site-react-practice/static/js/488.dbb1bf71.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.288e6df3.css",
-    "static/js/main.9533917a.js"
+    "static/css/main.39f6b5a3.css",
+    "static/js/main.b355fc33.js"
   ]
 }
